@@ -58,7 +58,7 @@ Add user parameters in the user_data object. See [Parameter Hierarchy & Overridi
 
 They will be:
 - written in Google Cloud Firestore every time they change --> latest values 
-- sent to BigQuery with the last available values --> every values
+- sent to BigQuery with the last available values --> all values
 
 These user parameters are reserved and can't be modified:
 - user_channel_grouping  
@@ -90,7 +90,7 @@ Add session parameters in the session_data object. See [Parameter Hierarchy & Ov
 
 They will be:
 - written in Google Cloud Firestore every time they change --> latest values 
-- sent to BigQuery with the last available values --> every values
+- sent to BigQuery with the last available values --> all values
 
 These session parameters are reserved and can't be modified:
 - user_id
