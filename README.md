@@ -282,46 +282,6 @@ If `utm_click_id` is missing, the Nameless Analytics Client-side Tracker tag att
 - For Linkedin: li_fat_id
 - For SnapChat: scclid
 
-<details><summary>See channel grouping rules</summary>
-
-</br>
-
-The following table describes how the channel is determined based on the source and campaign parameters. 
-
-| Source category | Campaign | Channel grouping |
-| :--- | :--- | :--- |
-| **Internal traffic** | Yes | `internal_traffic` |
-| **Direct** | Yes | `direct` |
-| **GTM Debugger** | Yes | `gtm_debugger` |
-| **Search Engine** | Yes | `paid_search_engine` |
-| **Search Engine** | No | `organic_search_engine` |
-| **Social** | Yes | `paid_social` |
-| **Social** | No | `organic_social` |
-| **Shopping** | Yes | `paid_shopping` |
-| **Shopping** | No | `organic_shopping` |
-| **Video** | Yes | `paid_video` |
-| **Video** | No | `organic_video` |
-| **AI** | Yes | `ai` |
-| **Email** | Yes | `email` |
-| None of the above | No | `referral` |
-| None of the above | Yes | `affiliate` |
-
-The channel grouping logic uses the following Source Categories based on the source name:
-
-| Source category | Source |
-| :--- | :--- |
-| **Internal traffic** | `null` |
-| **Direct** | `direct` |
-| **GTM Debugger** | `tagassistant.google.com` |
-| **Search Engine** | `360.cn`, `alice`, `aol`, `yahoo`, `ask`, `bing`, `google`, `yandex`, `baidu`, `ecosia`, `duckduckgo`, `sogou`, `naver`, `seznam` |
-| **Social** | `facebook`, `twitter`, `instagram`, `pinterest`, `linkedin`, `reddit`, `vk.com`, `tiktok`, `snapchat`, `tumblr`, `wechat`, `whatsapp` |
-| **Shopping** | `amazon`, `ebay`, `etsy`, `shopify`, `stripe`, `walmart`, `mercadolibre`, `alibaba`, `naver.shopping` |
-| **Video** | `youtube`, `vimeo`, `netflix`, `twitch`, `dailymotion`, `hulu`, `disneyplus`, `wistia`, `youku` |
-| **AI** | `chatgpt`, `gemini`, `bard`, `claude`, `alexa`, `siri`, `assistant`, `ai` |
-| **Email** | `email`, `e-mail`, `newsletter`, `mailchimp`, `sendgrid`, `sparkpost` |
-
-</details>
-
 
 ### Enable cross-domain tracking
 Enables the transfer of `client_id` and `session_id` data across two or more websites via a URL GET parameter. This allows Nameless Analytics tags to merge individual sessions into a single session that would otherwise be created when visiting other domains.
