@@ -251,13 +251,12 @@ The endpoint path must be the same for all domains.
 
 ## Advanced settings
 ### Respect Google Consent Mode
-When Google Consent Mode is present and `respect_consent_mode` is enabled, the events are sent only if a user consents. 
-- `analytics_storage` is equal to `denied`, the Nameless Analytics Client-side Tracker waits until consent is granted. The tag automatically preserves the original acquisition context (source and campaign data and page referrer) using a temporary first-party cookie named `na_temp`. Once consent is granted (even multiple pages later), the tag retrieves the data from the cookie and correctly attributes the session, preventing incorrect "direct" or "internal" referral attribution. 
-- `analytics_storage` changes from `denied` to `granted`, all pending tags for that page will be fired in execution order
-  
-When Google Consent Mode is present and `respect_consent_mode` is disabled, all events are sent regardless of user consents.
-
-When Google Consent Mode is not present, none of the events are sent, regardless of `respect_consent_mode` value.
+Fully integrated with Google Consent Mode. Choose between respect or not respect consent mode:
+- When Google Consent Mode is present and `respect_consent_mode` is enabled, the events are sent only if a user consents. 
+  - `analytics_storage` is equal to `denied`, the Nameless Analytics Client-side Tracker waits until consent is granted. The tag automatically preserves the original acquisition context (source and campaign data and page referrer) using a temporary first-party cookie named `na_temp`. Once consent is granted (even multiple pages later), the tag retrieves the data from the cookie and correctly attributes the session, preventing incorrect "direct" or "internal" referral attribution. 
+  - `analytics_storage` changes from `denied` to `granted`, all pending tags for that page will be fired in execution order
+- When Google Consent Mode not present and `respect_consent_mode` is enabled, none of the events are sent. 
+- When `respect_consent_mode` is disabled, all events are sent regardless of presence of Google Consent Mode.
 
 
 ### Override default acquisition parameters
