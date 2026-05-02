@@ -137,7 +137,7 @@ These parameters can be overridden by:
 
 ## Page data
 ### Page parameters
-Add page parameters in the page_data object. Read how to track [page views](https://github.com/nameless-analytics/nameless-analytics/tree/main/setup-guides/SETUP-GUIDES.md#page-view) for more information.
+Add page parameters in the page_data object. Read how to track [page views](https://github.com/nameless-analytics/nameless-analytics/tree/main/setup-guides/SETUP-GUIDES.md#how-to-track-page-views) for more information.
 
 They will be sent to BigQuery with every event.
 
