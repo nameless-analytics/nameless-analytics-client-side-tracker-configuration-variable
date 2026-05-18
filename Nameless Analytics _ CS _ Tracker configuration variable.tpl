@@ -430,20 +430,6 @@ ___TEMPLATE_PARAMETERS___
                       "^(?!user_id$).*"
                     ],
                     "errorMessage": "Can\u0027t add user_id parameter."
-                  },
-                  {
-                    "type": "REGEX",
-                    "args": [
-                      "^(?!total_events$).*"
-                    ],
-                    "errorMessage": "Can\u0027t add total_events parameter."
-                  },
-                  {
-                    "type": "REGEX",
-                    "args": [
-                      "^(?!total_page_views$).*"
-                    ],
-                    "errorMessage": "Can\u0027t add total_page_views parameter."
                   }
                 ]
               },
@@ -472,7 +458,7 @@ ___TEMPLATE_PARAMETERS___
         ],
         "displayName": "",
         "alwaysInSummary": true,
-        "help": "Add session parameters to the request in session_data. If a parameter has the same name, it will be overridden.\n\u003c/br\u003e\u003c/br\u003e\nReserved session parameters: \u003c/br\u003e\n• user_id \u003c/br\u003e\n• session_number \u003c/br\u003e \n• cross_domain_session \u003c/br\u003e \n• session_channel_grouping \u003c/br\u003e \n• session_source \u003c/br\u003e \n• session_tld_source \u003c/br\u003e \n• session_campaign \u003c/br\u003e \n• session_campaign_id \u003c/br\u003e \n• session_campaign_click_id \u003c/br\u003e\n• session_campaign_content \u003c/br\u003e \n• session_campaign_term \u003c/br\u003e \n• session_device_type \u003c/br\u003e \n• session_city \u003c/br\u003e\n• session_country \u003c/br\u003e \n• session_language \u003c/br\u003e \n• session_hostname \u003c/br\u003e \n• session_browser_name \u003c/br\u003e \n• session_landing_page_category \u003c/br\u003e \n• session_landing_page_location \u003c/br\u003e \n• session_landing_page_title \u003c/br\u003e \n• session_exit_page_category \u003c/br\u003e \n• session_exit_page_location \u003c/br\u003e \n• session_exit_page_title \u003c/br\u003e \n• session_start_timestamp \u003c/br\u003e \n• session_end_timestamp \u003c/br\u003e\n• total_events \u003c/br\u003e\n• total_page_views",
+        "help": "Add session parameters to the request in session_data. If a parameter has the same name, it will be overridden.\n\u003c/br\u003e\u003c/br\u003e\nReserved session parameters: \u003c/br\u003e\n• user_id \u003c/br\u003e\n• session_number \u003c/br\u003e \n• cross_domain_session \u003c/br\u003e \n• session_channel_grouping \u003c/br\u003e \n• session_source \u003c/br\u003e \n• session_tld_source \u003c/br\u003e \n• session_campaign \u003c/br\u003e \n• session_campaign_id \u003c/br\u003e \n• session_campaign_click_id \u003c/br\u003e\n• session_campaign_content \u003c/br\u003e \n• session_campaign_term \u003c/br\u003e \n• session_device_type \u003c/br\u003e \n• session_city \u003c/br\u003e\n• session_country \u003c/br\u003e \n• session_language \u003c/br\u003e \n• session_hostname \u003c/br\u003e \n• session_browser_name \u003c/br\u003e \n• session_landing_page_category \u003c/br\u003e \n• session_landing_page_location \u003c/br\u003e \n• session_landing_page_title \u003c/br\u003e \n• session_exit_page_category \u003c/br\u003e \n• session_exit_page_location \u003c/br\u003e \n• session_exit_page_title \u003c/br\u003e \n• session_start_timestamp \u003c/br\u003e \n• session_end_timestamp",
         "defaultValue": false
       }
     ]
@@ -485,40 +471,14 @@ ___TEMPLATE_PARAMETERS___
     "subParams": [
       {
         "type": "CHECKBOX",
-        "name": "add_page_status_code",
-        "checkboxText": "Add page status code",
-        "simpleValueType": true,
-        "help": "Add page status code when event_type equals page_view. \u003c/br\u003e\u003c/br\u003e \u003cb\u003eThis setting will make HEAD requests to the website server every time a page is loaded.\u003c/b\u003e",
-        "defaultValue": false,
-        "alwaysInSummary": true,
-        "displayName": "Page parameters"
-      },
-      {
-        "type": "CHECKBOX",
         "name": "override_page_data_params",
         "checkboxText": "Override default page parameters",
         "simpleValueType": true,
         "help": "Override default title and url parameters. Change this settings if virtual page views is tracked via dataLayer push.",
-        "displayName": "",
+        "displayName": "Page parameters",
         "defaultValue": false,
         "alwaysInSummary": true,
         "subParams": [
-          {
-            "type": "TEXT",
-            "name": "page_category",
-            "displayName": "Page category",
-            "simpleValueType": true,
-            "alwaysInSummary": true,
-            "valueHint": "(not set)",
-            "help": "Add page_category parameter to the request in page_data.",
-            "enablingConditions": [
-              {
-                "paramName": "override_page_data_params",
-                "paramValue": true,
-                "type": "EQUALS"
-              }
-            ]
-          },
           {
             "type": "TEXT",
             "name": "page_title",
@@ -532,6 +492,11 @@ ___TEMPLATE_PARAMETERS___
                 "paramName": "override_page_data_params",
                 "paramValue": true,
                 "type": "EQUALS"
+              }
+            ],
+            "valueValidators": [
+              {
+                "type": "NON_EMPTY"
               }
             ]
           },
@@ -548,6 +513,11 @@ ___TEMPLATE_PARAMETERS___
                 "paramName": "override_page_data_params",
                 "paramValue": true,
                 "type": "EQUALS"
+              }
+            ],
+            "valueValidators": [
+              {
+                "type": "NON_EMPTY"
               }
             ]
           },
@@ -600,6 +570,139 @@ ___TEMPLATE_PARAMETERS___
             ]
           }
         ]
+      },
+      {
+        "type": "CHECKBOX",
+        "name": "add_page_params",
+        "checkboxText": "Add page level parameters",
+        "simpleValueType": true,
+        "subParams": [
+          {
+            "type": "SIMPLE_TABLE",
+            "name": "page_params",
+            "displayName": "Page parameters",
+            "simpleTableColumns": [
+              {
+                "defaultValue": "",
+                "displayName": "Param name",
+                "name": "param_name",
+                "type": "TEXT",
+                "valueHint": "(not set)",
+                "isUnique": true,
+                "valueValidators": [
+                  {
+                    "type": "NON_EMPTY"
+                  },
+                  {
+                    "type": "REGEX",
+                    "args": [
+                      "^(?!page_load_timestamp$).*"
+                    ],
+                    "errorMessage": "Can\u0027t add page_load_timestamp parameter."
+                  },
+                  {
+                    "type": "REGEX",
+                    "args": [
+                      "^(?!page_hostname_protocol$).*"
+                    ],
+                    "errorMessage": "Can\u0027t add page_hostname_protocol parameter."
+                  },
+                  {
+                    "type": "REGEX",
+                    "args": [
+                      "^(?!page_hostname $).*"
+                    ],
+                    "errorMessage": "Can\u0027t add page_hostname parameter."
+                  },
+                  {
+                    "type": "REGEX",
+                    "args": [
+                      "^(?!page_title$).*"
+                    ],
+                    "errorMessage": "Can\u0027t add page_title parameter."
+                  },
+                  {
+                    "type": "REGEX",
+                    "args": [
+                      "^(?!page_location$).*"
+                    ],
+                    "errorMessage": "Can\u0027t add page_location parameter."
+                  },
+                  {
+                    "type": "REGEX",
+                    "args": [
+                      "^(?!page_fragment$).*"
+                    ],
+                    "errorMessage": "Can\u0027t add page_fragment parameter.",
+                    "enablingConditions": []
+                  },
+                  {
+                    "type": "REGEX",
+                    "args": [
+                      "^(?!page_query$).*"
+                    ],
+                    "errorMessage": "Can\u0027t add page_query parameter."
+                  },
+                  {
+                    "type": "REGEX",
+                    "args": [
+                      "^(?!page_extension$).*"
+                    ],
+                    "errorMessage": "Can\u0027t add page_extension parameter."
+                  },
+                  {
+                    "type": "REGEX",
+                    "args": [
+                      "^(?!page_referrer$).*"
+                    ],
+                    "errorMessage": "Can\u0027t add page_referrer parameter."
+                  },
+                  {
+                    "type": "REGEX",
+                    "args": [
+                      "^(?!page_status_code$).*"
+                    ],
+                    "errorMessage": "Can\u0027t add page_status_code parameter."
+                  }
+                ]
+              },
+              {
+                "defaultValue": "",
+                "displayName": "Param value",
+                "name": "param_value",
+                "type": "TEXT",
+                "valueHint": "(not set)"
+              }
+            ],
+            "alwaysInSummary": true,
+            "valueValidators": [
+              {
+                "type": "NON_EMPTY"
+              }
+            ],
+            "enablingConditions": [
+              {
+                "paramName": "add_page_params",
+                "paramValue": true,
+                "type": "EQUALS"
+              }
+            ]
+          }
+        ],
+        "displayName": "",
+        "alwaysInSummary": true,
+        "help": "Add page parameters to the request in session_data. If a parameter has the same name, it will be overridden.\n\u003c/br\u003e\u003c/br\u003e\nReserved page parameters: \u003c/br\u003e\n• page_load_timestamp\u003c/br\u003e\n• page_hostname_protocol\u003c/br\u003e\n• page_hostname\u003c/br\u003e\n• page_title\u003c/br\u003e\n• page_location\u003c/br\u003e\n• page_fragment\u003c/br\u003e\n• page_query\u003c/br\u003e\n• page_extension\u003c/br\u003e\n• page_referrer\u003c/br\u003e\n• page_status_code",
+        "defaultValue": false
+      },
+      {
+        "type": "CHECKBOX",
+        "name": "add_page_status_code",
+        "checkboxText": "Add page status code",
+        "simpleValueType": true,
+        "help": "Add page status code when event_type equals page_view. \u003c/br\u003e\u003c/br\u003e \u003cb\u003eThis setting will make HEAD requests to the website server every time a page is loaded.\u003c/b\u003e",
+        "defaultValue": false,
+        "alwaysInSummary": true,
+        "displayName": ""
       }
     ]
   },
