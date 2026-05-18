@@ -19,6 +19,7 @@ For an overview of how Nameless Analytics works [start from here](https://github
     - [Add session level parameters](#add-session-level-parameters)
 - [Page data](#page-data)
   - [Page parameters](#page-parameters)
+    - [Add page level parameters](#add-page-level-parameters)
     - [Add page status code](#add-page-status-code)
     - [Override default page parameters](#override-default-page-parameters)
 - [Event data](#event-data)
@@ -140,6 +141,23 @@ These parameters can be overridden by:
 Add page parameters in the page_data object. Read how to track [page views](https://github.com/nameless-analytics/nameless-analytics/tree/main/setup-guides/SETUP-GUIDES.md#how-to-track-page-views) for more information.
 
 They will be sent to BigQuery with every event.
+
+These page parameters are reserved and can't be modified:
+- page_id
+- page_load_timestamp
+- page_hostname_protocol
+- page_hostname
+- page_title
+- page_location
+- page_fragment
+- page_query
+- page_extension
+- page_referrer
+
+#### Add page level parameters
+Add or override custom page level parameters. Accepted values: strings, integers, floats, JSON and booleans.
+
+These parameters can't be overridden by any other tags.
 
 #### Add page status code
 This feature captures the HTTP status code (e.g., 200, 404, 500) of the current page and adds it to the `page_data` object during the `page_view` event. This is essential for monitoring broken links and server-side errors directly within your analytics reports.
