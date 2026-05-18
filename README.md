@@ -119,8 +119,6 @@ These session parameters are reserved and can't be modified:
 - session_exit_page_title 
 - session_start_timestamp 
 - session_end_timestamp
-- total_events
-- total_page_views
 
 #### Add User ID
 Add User ID parameter at session level. Accepted values: strings, integers, floats, JSON and booleans.
@@ -153,6 +151,7 @@ These page parameters are reserved and can't be modified:
 - page_query
 - page_extension
 - page_referrer
+- page_status_code
 
 #### Add page level parameters
 Add or override custom page level parameters. Accepted values: strings, integers, floats, JSON and booleans.
@@ -232,7 +231,6 @@ These event parameters are reserved and can't be modified:
 - screen_size 
 - viewport_size
 - tld_source
-- hostname
 - city
 - country
 

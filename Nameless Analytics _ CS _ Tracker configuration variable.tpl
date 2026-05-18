@@ -1,4 +1,4 @@
-﻿___TERMS_OF_SERVICE___
+___TERMS_OF_SERVICE___
 
 By creating or modifying this file you agree to Google Tag Manager's Community
 Template Gallery Developer Terms of Service available at
@@ -154,13 +154,6 @@ ___TEMPLATE_PARAMETERS___
                       "^(?!user_city$).*"
                     ],
                     "errorMessage": "Can\u0027t add user_city parameter."
-                  },
-                  {
-                    "type": "REGEX",
-                    "args": [
-                      "^(?!user_country$).*"
-                    ],
-                    "errorMessage": "Can\u0027t add user_country parameter."
                   }
                 ]
               },
@@ -189,7 +182,7 @@ ___TEMPLATE_PARAMETERS___
         ],
         "displayName": "User parameters",
         "alwaysInSummary": true,
-        "help": "Add user parameters to the request in user_data. If a parameter has the same name, it will be overridden.\n\u003c/br\u003e\u003c/br\u003e\nReserved user parameters: \u003c/br\u003e  \n• user_channel_grouping \u003c/br\u003e  \n• user_source \u003c/br\u003e  \n• user_tld_source \u003c/br\u003e  \n• user_campaign \u003c/br\u003e  \n• user_campaign_id \u003c/br\u003e  \n• user_campaign_click_id\u003c/br\u003e\n• user_campaign_content \u003c/br\u003e  \n• user_campaign_term \u003c/br\u003e  \n• user_device_type \u003c/br\u003e  \n• user_country \u003c/br\u003e  \n• user_language \u003c/br\u003e  \n• user_city \u003c/br\u003e\n• user_country \u003c/br\u003e\n• user_first_session_timestamp \u003c/br\u003e\n• user_last_session_timestamp",
+        "help": "Add user parameters to the request in user_data. If a parameter has the same name, it will be overridden.\n\u003c/br\u003e\u003c/br\u003e\nReserved user parameters: \u003c/br\u003e  \n• user_channel_grouping \u003c/br\u003e  \n• user_source \u003c/br\u003e  \n• user_tld_source \u003c/br\u003e  \n• user_campaign \u003c/br\u003e  \n• user_campaign_id \u003c/br\u003e  \n• user_campaign_click_id\u003c/br\u003e\n• user_campaign_content \u003c/br\u003e  \n• user_campaign_term \u003c/br\u003e  \n• user_device_type \u003c/br\u003e  \n• user_country \u003c/br\u003e  \n• user_language \u003c/br\u003e  \n• user_city \u003c/br\u003e\n• user_first_session_timestamp \u003c/br\u003e\n• user_last_session_timestamp",
         "defaultValue": false
       }
     ]
@@ -610,7 +603,7 @@ ___TEMPLATE_PARAMETERS___
                   {
                     "type": "REGEX",
                     "args": [
-                      "^(?!page_hostname $).*"
+                      "^(?!page_hostname$).*"
                     ],
                     "errorMessage": "Can\u0027t add page_hostname parameter."
                   },
