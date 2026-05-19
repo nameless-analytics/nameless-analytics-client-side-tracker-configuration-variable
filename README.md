@@ -2,7 +2,7 @@
 
 The Nameless Analytics Client-side Tracker Configuration Variable is a highly customizable GTM custom variable template designed to configure the settings of [Nameless Analytics Client-side Tracker Tag](https://github.com/nameless-analytics/client-side-tracker-tag/). 
 
-For an overview of how Nameless Analytics works [start from here](https://github.com/nameless-analytics/nameless-analytics/#high-level-data-flow).
+For an overview of how Nameless Analytics works [start from here](https://github.com/nameless-analytics/nameless-analytics/#overview).
 
 ### 🚧 Nameless Analytics and the documentation are currently in beta and subject to change
 
@@ -55,7 +55,7 @@ This is the UI of the Nameless Analytics Client-side Tracker Configuration Varia
 
 ## User data
 ### User parameters
-Add user parameters in the user_data object. See [Parameter Hierarchy & Overriding](https://github.com/nameless-analytics/nameless-analytics/#parameter-hierarchy--overriding) in the main project documentation.
+Add user parameters in the user_data object. See [Parameter Hierarchy](https://github.com/nameless-analytics/nameless-analytics/#parameter-hierarchy) in the main project documentation.
 
 They will be:
 - written in Google Cloud Firestore every time they change --> latest values 
@@ -87,7 +87,7 @@ These parameters can be overridden by:
 
 ## Session data
 ### Session parameters
-Add session parameters in the session_data object. See [Parameter Hierarchy & Overriding](https://github.com/nameless-analytics/nameless-analytics/#parameter-hierarchy--overriding) in the main project documentation.
+Add session parameters in the session_data object. See [Parameter Hierarchy](https://github.com/nameless-analytics/nameless-analytics/#parameter-hierarchy) in the main project documentation.
 
 They will be:
 - written in Google Cloud Firestore every time they change --> latest values 
@@ -206,7 +206,7 @@ If virtual page view is triggered by a custom dataLayer event, use this field to
 
 ## Event data
 ### Shared event parameters
-Add shared event parameters in the event_data object. See [Parameter Hierarchy & Overriding](https://github.com/nameless-analytics/nameless-analytics/#parameter-hierarchy--overriding) in the main project documentation.
+Add shared event parameters in the event_data object. See [Parameter Hierarchy](https://github.com/nameless-analytics/nameless-analytics/#parameter-hierarchy) in the main project documentation.
 
 They will be sent to BigQuery with every event.
 
