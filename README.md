@@ -9,7 +9,7 @@ For an overview of how Nameless Analytics works [start from here](https://github
 
 
 ## Table of Contents
-- [Nameless Analytics Client-side Tracker Configuration Variable UI](#client-side-tracker-configuration-variable-ui)
+- [Nameless Analytics Client-side Tracker Configuration Variable UI](#nameless-analytics-client-side-tracker-configuration-variable-ui)
 - [User data](#user-data)
   - [User parameters](#user-parameters)
     - [Add user level parameters](#add-user-level-parameters)
