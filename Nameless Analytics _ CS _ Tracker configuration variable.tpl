@@ -684,7 +684,7 @@ ___TEMPLATE_PARAMETERS___
         ],
         "displayName": "",
         "alwaysInSummary": true,
-        "help": "Add page parameters to the request in session_data. If a parameter has the same name, it will be overridden.\n\u003c/br\u003e\u003c/br\u003e\nReserved page parameters: \u003c/br\u003e\n• page_load_timestamp\u003c/br\u003e\n• page_hostname_protocol\u003c/br\u003e\n• page_hostname\u003c/br\u003e\n• page_title\u003c/br\u003e\n• page_location\u003c/br\u003e\n• page_fragment\u003c/br\u003e\n• page_query\u003c/br\u003e\n• page_extension\u003c/br\u003e\n• page_referrer\u003c/br\u003e\n• page_status_code",
+        "help": "Add page parameters to the request in page_data. If a parameter has the same name, it will be overridden.\n\u003c/br\u003e\u003c/br\u003e\nReserved page parameters: \u003c/br\u003e\n• page_load_timestamp\u003c/br\u003e\n• page_hostname_protocol\u003c/br\u003e\n• page_hostname\u003c/br\u003e\n• page_title\u003c/br\u003e\n• page_location\u003c/br\u003e\n• page_fragment\u003c/br\u003e\n• page_query\u003c/br\u003e\n• page_extension\u003c/br\u003e\n• page_referrer\u003c/br\u003e\n• page_status_code",
         "defaultValue": false
       },
       {
